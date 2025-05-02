@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Container, Paper, Avatar, Grid, List, ListItem, ListItemIcon, ListItemText, Chip, LinearProgress, Link, Divider } from '@mui/material';
+import { Box, Typography, Container, Paper, Avatar, Grid, List, ListItem, ListItemIcon, ListItemText, Chip, LinearProgress, Link } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -10,7 +10,6 @@ import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import CodeIcon from '@mui/icons-material/Code';
-import DirectionsRunIcon from '@mui/icons-material/DirectionsRun';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import ViewKanbanIcon from '@mui/icons-material/ViewKanban';
@@ -33,10 +32,10 @@ const Home: React.FC = () => {
             </Box>
 
             <Grid container spacing={3}>
-              {/* İletişim Bilgileri */}
+              {/* İletişim & Sosyal Medya */}
               <Grid item xs={12} md={6}>
                 <Paper elevation={2} sx={{ p: 2, mb: 2, background: '#232526', color: '#fff' }}>
-                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>İletişim</Typography>
+                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>İletişim & Sosyal Medya</Typography>
                   <List dense>
                     <ListItem>
                       <ListItemIcon><PhoneIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
@@ -51,23 +50,21 @@ const Home: React.FC = () => {
                       <ListItemText primary="Huzurevleri Mah. 35. Sk No:1 Kat:4, Diyarbakır/Kayapınar" />
                     </ListItem>
                   </List>
-                </Paper>
-                <Paper elevation={2} sx={{ p: 2, background: '#232526', color: '#fff' }}>
-                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>Konuştuğu Diller</Typography>
-                  <List dense>
-                    <ListItem>
-                      <ListItemIcon><LanguageIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
-                      <ListItemText primary="Türkçe - Ana Dil" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><LanguageIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
-                      <ListItemText primary="İngilizce - Orta" />
-                    </ListItem>
-                  </List>
+                  <Box sx={{ display: 'flex', gap: 2, mt: 2 }}>
+                    <Link href="https://github.com/yusuf-tokay" target="_blank" rel="noopener noreferrer">
+                      <GitHubIcon fontSize="large" sx={{ color: '#90caf9' }} />
+                    </Link>
+                    <Link href="https://www.instagram.com/21_tky_21/" target="_blank" rel="noopener noreferrer">
+                      <InstagramIcon fontSize="large" sx={{ color: '#f48fb1' }} />
+                    </Link>
+                    <Link href="https://trello.com/u/yusuftokay" target="_blank" rel="noopener noreferrer">
+                      <ViewKanbanIcon fontSize="large" sx={{ color: '#f48fb1' }} />
+                    </Link>
+                  </Box>
                 </Paper>
               </Grid>
 
-              {/* Eğitim ve Teknik Bilgiler */}
+              {/* Eğitim */}
               <Grid item xs={12} md={6}>
                 <Paper elevation={2} sx={{ p: 2, mb: 2, background: '#232526', color: '#fff' }}>
                   <Typography variant="subtitle1" fontWeight={600} gutterBottom>Eğitim</Typography>
@@ -101,8 +98,37 @@ const Home: React.FC = () => {
                     </ListItem>
                   </List>
                 </Paper>
-                <Paper elevation={2} sx={{ p: 2, background: '#232526', color: '#fff' }}>
-                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>Skills & Technologies</Typography>
+              </Grid>
+
+              {/* Diller */}
+              <Grid item xs={12} md={6}>
+                <Paper elevation={2} sx={{ p: 2, mb: 2, background: '#232526', color: '#fff' }}>
+                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>Diller</Typography>
+                  <List dense>
+                    <ListItem>
+                      <ListItemIcon><LanguageIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
+                      <ListItemText primary="Türkçe - Ana Dil" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon><LanguageIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
+                      <ListItemText primary="İngilizce - Orta" />
+                    </ListItem>
+                  </List>
+                  <Box sx={{ mt: 2 }}>
+                    <Typography variant="body1">Turkish (Native)</Typography>
+                    <LinearProgress variant="determinate" value={100} sx={{ mb: 2, height: 10, borderRadius: 5 }} />
+                    <Typography variant="body1">English (Advanced)</Typography>
+                    <LinearProgress variant="determinate" value={80} sx={{ mb: 2, height: 10, borderRadius: 5 }} />
+                    <Typography variant="body1">German (Intermediate)</Typography>
+                    <LinearProgress variant="determinate" value={50} sx={{ mb: 2, height: 10, borderRadius: 5 }} />
+                  </Box>
+                </Paper>
+              </Grid>
+
+              {/* Yetenekler & Teknik Beceriler */}
+              <Grid item xs={12} md={6}>
+                <Paper elevation={2} sx={{ p: 2, mb: 2, background: '#232526', color: '#fff' }}>
+                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>Yetenekler & Teknik Beceriler</Typography>
                   <List dense>
                     <ListItem>
                       <ListItemIcon><CodeIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
@@ -132,49 +158,9 @@ const Home: React.FC = () => {
                       <ListItemIcon><CodeIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
                       <ListItemText primary="VS Code, Android Studio, PyCharm" />
                     </ListItem>
-                  </List>
-                </Paper>
-              </Grid>
-
-              {/* Language Proficiency & Soft Skills */}
-              <Grid item xs={12} md={6}>
-                <Paper elevation={2} sx={{ p: 2, mb: 2, background: '#232526', color: '#fff' }}>
-                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>Language Proficiency</Typography>
-                  <Box sx={{ mt: 2 }}>
-                    <Typography variant="body1">Turkish (Native)</Typography>
-                    <LinearProgress variant="determinate" value={100} sx={{ mb: 2, height: 10, borderRadius: 5 }} />
-                    <Typography variant="body1">English (Advanced)</Typography>
-                    <LinearProgress variant="determinate" value={80} sx={{ mb: 2, height: 10, borderRadius: 5 }} />
-                    <Typography variant="body1">German (Intermediate)</Typography>
-                    <LinearProgress variant="determinate" value={50} sx={{ mb: 2, height: 10, borderRadius: 5 }} />
-                  </Box>
-                </Paper>
-                <Paper elevation={2} sx={{ p: 2, background: '#232526', color: '#fff' }}>
-                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>Soft Skills</Typography>
-                  <List dense>
                     <ListItem>
                       <ListItemIcon><PsychologyIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Problem Solving" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><PsychologyIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Team Collaboration" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><PsychologyIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Time Management" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><PsychologyIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Adaptability" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><PsychologyIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Critical Thinking" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><PsychologyIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Communication" />
+                      <ListItemText primary="Problem Solving, Team Collaboration, Time Management, Adaptability, Critical Thinking, Communication" />
                     </ListItem>
                   </List>
                 </Paper>
@@ -187,31 +173,7 @@ const Home: React.FC = () => {
                   <List dense>
                     <ListItem>
                       <ListItemIcon><SportsEsportsIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="AI & Machine Learning Research" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><SportsEsportsIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Mobile Game Development" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><SportsEsportsIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Open Source Contribution" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><SportsEsportsIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Reading Technical Books & Articles" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><SportsEsportsIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Playing Chess" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><SportsEsportsIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Photography" />
-                    </ListItem>
-                    <ListItem>
-                      <ListItemIcon><SportsEsportsIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
-                      <ListItemText primary="Traveling" />
+                      <ListItemText primary="AI & Machine Learning Research, Mobile Game Development, Open Source Contribution, Reading Technical Books & Articles, Playing Chess, Photography, Traveling" />
                     </ListItem>
                   </List>
                 </Paper>
@@ -220,7 +182,7 @@ const Home: React.FC = () => {
               {/* Projeler */}
               <Grid item xs={12} md={6}>
                 <Paper elevation={2} sx={{ p: 2, mb: 2, background: '#232526', color: '#fff' }}>
-                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>Yaptığı Projeler</Typography>
+                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>Projeler</Typography>
                   <List dense>
                     <ListItem>
                       <ListItemIcon><WorkIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
@@ -243,24 +205,6 @@ const Home: React.FC = () => {
                       <ListItemText primary="C# ile Rent a car otomasyonu ve birçok otomasyon" />
                     </ListItem>
                   </List>
-                </Paper>
-              </Grid>
-
-              {/* Sosyal Medya */}
-              <Grid item xs={12}>
-                <Paper elevation={2} sx={{ p: 2, background: '#232526', color: '#fff', textAlign: 'center' }}>
-                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>Connect With Me</Typography>
-                  <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mt: 2 }}>
-                    <Link href="https://github.com/yusuf-tokay" target="_blank" rel="noopener noreferrer">
-                      <GitHubIcon fontSize="large" sx={{ color: '#90caf9' }} />
-                    </Link>
-                    <Link href="https://www.instagram.com/21_tky_21/" target="_blank" rel="noopener noreferrer">
-                      <InstagramIcon fontSize="large" sx={{ color: '#f48fb1' }} />
-                    </Link>
-                    <Link href="https://trello.com/u/yusuftokay" target="_blank" rel="noopener noreferrer">
-                      <ViewKanbanIcon fontSize="large" sx={{ color: '#f48fb1' }} />
-                    </Link>
-                  </Box>
                 </Paper>
               </Grid>
             </Grid>

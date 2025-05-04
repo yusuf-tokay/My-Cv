@@ -17,17 +17,17 @@ import { motion } from 'framer-motion';
 
 const Home: React.FC = () => {
   return (
-    <Box sx={{ minHeight: '100vh', background: 'linear-gradient(135deg, #232526 0%, #414345 100%)', py: 6 }}>
+    <Box sx={{ minHeight: '100vh', background: 'linear-gradient(135deg, rgba(15, 15, 15, 0.59) 0%, rgb(29, 132, 234) 500%)', py: 6 }}>
       <Container maxWidth="md">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <Paper elevation={6} sx={{ p: { xs: 2, md: 4 }, borderRadius: 4, background: 'rgba(30, 41, 59, 0.95)', color: '#fff' }}>
+          <Paper elevation={6} sx={{ p: { xs: 2, md: 4 }, borderRadius: 4, background: 'rgba(34, 33, 32, 0.96)', color: '#fff' }}>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 3 }}>
-              <Avatar src="/profile.jpg" alt="Yusuf Tokay" sx={{ width: 120, height: 120, mb: 2, border: '4px solid #90caf9' }} />
               <Typography variant="h4" fontWeight={700} align="center" sx={{ color: '#90caf9' }}>YUSUF TOKAY</Typography>
+              <Avatar src="/ben.png" alt="Yusuf Tokay" sx={{ width: 100, height: 100, border: '4px solid rgb(15, 244, 213)', boxShadow: '0 0 20px rgba(220, 227, 20, 0.5)', borderRadius: '10px', mt: 2 }} />
               <Typography variant="h6" color="secondary" align="center" gutterBottom>Yazılım Mühendisi Öğrencisi</Typography>
             </Box>
 
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
                   <List dense>
                     <ListItem>
                       <ListItemIcon><PhoneIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
-                      <ListItemText primary="5370123638" />
+                      <ListItemText primary="5312973249" />
                     </ListItem>
                     <ListItem>
                       <ListItemIcon><EmailIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
                     <Link href="https://www.instagram.com/21_tky_21/" target="_blank" rel="noopener noreferrer">
                       <InstagramIcon fontSize="large" sx={{ color: '#f48fb1' }} />
                     </Link>
-                    <Link href="https://trello.com/u/yusuftokay" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://trello.com/u/yusuftokay/boards" target="_blank" rel="noopener noreferrer">
                       <ViewKanbanIcon fontSize="large" sx={{ color: '#f48fb1' }} />
                     </Link>
                   </Box>
@@ -93,7 +93,7 @@ const Home: React.FC = () => {
                     <ListItem>
                       <ListItemIcon><EmojiEventsIcon sx={{ color: '#f48fb1' }} /></ListItemIcon>
                       <ListItemText
-                        primary="2019 yılında tıbbîtaç tak yapmış olduğum enerji dönüşümü adlı projede tıbbîtaç belgesine sahip oldum."
+                        primary="2019 yılında tübitak ta yapmış olduğum enerji dönüşümü adlı projede tübitak belgesine sahip oldum."
                       />
                     </ListItem>
                   </List>
@@ -179,6 +179,23 @@ const Home: React.FC = () => {
                 </Paper>
               </Grid>
 
+              {/* İş Deneyimi */}
+              <Grid item xs={12} md={6}>
+                <Paper elevation={2} sx={{ p: 2, mb: 2, background: '#232526', color: '#fff' }}>
+                  <Typography variant="subtitle1" fontWeight={600} gutterBottom>İş Deneyimi</Typography>
+                  <List dense>
+                    <ListItem>
+                      <ListItemIcon><WorkIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
+                      <ListItemText primary="Kriptarium - Siber Güvenlik Üzerine İşyeri Eğitimi" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon><WorkIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
+                      <ListItemText primary="Intellıum Bilişim Teknolojileri - Yapay Zeka Üzerine Staj (2 Ay)" />
+                    </ListItem>
+                  </List>
+                </Paper>
+              </Grid>
+
               {/* Projeler */}
               <Grid item xs={12} md={6}>
                 <Paper elevation={2} sx={{ p: 2, mb: 2, background: '#232526', color: '#fff' }}>
@@ -203,6 +220,18 @@ const Home: React.FC = () => {
                     <ListItem>
                       <ListItemIcon><WorkIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
                       <ListItemText primary="C# ile Rent a car otomasyonu ve birçok otomasyon" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon><WorkIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
+                      <ListItemText primary="javascript ile Cafe Cestorant web sitesi" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon><WorkIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
+                      <ListItemText primary="Flutter ile Cafe Restorunt Yönetim mobil uygulaması" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemIcon><WorkIcon sx={{ color: '#90caf9' }} /></ListItemIcon>
+                      <ListItemText primary="Unıty ile ve birçok dil yardımı ile Artırılmış gerçeklik adlı mobil oyun " />
                     </ListItem>
                   </List>
                 </Paper>

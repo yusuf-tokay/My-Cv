@@ -79,8 +79,7 @@ const About: React.FC = () => {
                 <Typography variant="body1">English (Advanced)</Typography>
                 <LinearProgress variant="determinate" value={80} sx={{ mb: 2 }} />
                 
-                <Typography variant="body1">German (Intermediate)</Typography>
-                <LinearProgress variant="determinate" value={50} sx={{ mb: 2 }} />
+                
               </Box>
             </Paper>
           </Box>
@@ -136,7 +135,7 @@ const About: React.FC = () => {
                 <Link href="https://www.instagram.com/21_tky_21/" target="_blank" rel="noopener noreferrer">
                   <InstagramIcon fontSize="large" />
                 </Link>
-                <Link href="https://trello.com/u/yusuftokay" target="_blank" rel="noopener noreferrer">
+                <Link href="https://trello.com/u/yusuftokay/boards" target="_blank" rel="noopener noreferrer">
                   <ViewKanbanIcon fontSize="large" />
                 </Link>
               </Box>

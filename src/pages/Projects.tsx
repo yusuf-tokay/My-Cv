@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
       title: 'Deep Learning - Emotion Analysis',
       description: 'A deep learning-based emotion analysis system using Python and TensorFlow.',
       technologies: ['Python', 'TensorFlow', 'Keras', 'OpenCV'],
-      githubLink: 'https://github.com/yusuf-tokay/emotion-analysis',
+      githubLink: 'https://github.com/yusuf-tokay/derin_ogrenme_ile_duygu_analizi',
       demoLink: '#'
     },
     {
@@ -24,14 +24,14 @@ const Projects: React.FC = () => {
       title: 'Cafe Reservation Platform',
       description: 'A web-based platform for cafe reservations and management.',
       technologies: ['React', 'Node.js', 'MongoDB'],
-      githubLink: 'https://github.com/yusuf-tokay/cafe-reservation',
+      githubLink: 'https://github.com/yusuf-tokay/Cafe-restorant_sipari-_takip_uygulamas-',
       demoLink: '#'
     },
     {
       title: 'Brain Tumor Detection System',
       description: 'AI-powered system for detecting brain tumors from MRI images.',
       technologies: ['Python', 'TensorFlow', 'OpenCV'],
-      githubLink: 'https://github.com/yusuf-tokay/brain-tumor-detection',
+      githubLink: 'hhttps://github.com/yusuf-tokay/brain-tumor-detectionn',
       demoLink: '#'
     },
     {
@@ -45,7 +45,7 @@ const Projects: React.FC = () => {
       title: 'FlyAr - Augmented Reality Game',
       description: 'An augmented reality game developed with Unity.',
       technologies: ['Unity', 'C#', 'AR Foundation'],
-      githubLink: 'https://github.com/yusuf-tokay/flyar',
+      githubLink: 'https://github.com/FlyAR-Game',
       demoLink: '#'
     }
   ];
